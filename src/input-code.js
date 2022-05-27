@@ -27,7 +27,7 @@
             store.set('meeting'+pos+'.name', document.getElementById('input-name').value)
             store.set('meeting'+pos+'.url', convertedUrl)
 
-            window.location.href = "src/select-screen.html";
+            window.location.href = "select-screen.html";
         });
     }
 

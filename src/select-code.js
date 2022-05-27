@@ -38,18 +38,18 @@ class Meeting {
             // set text and button
             if (meeting.isActive()) {
                 document.querySelector(meeting.name_selector).innerHTML = meeting.name
-                document.querySelector(meeting.btn_selector).src = 'src/images/zoombtn_normal.png'
+                document.querySelector(meeting.btn_selector).src = 'images/zoombtn_normal.png'
             }
 
             // register click listeners
             document.querySelector(meeting.btn_selector).addEventListener('click', function(e) {
                 if (meeting.isActive()) shell.openExternal(meeting.url)
-                else window.location.href = "src/input.html?"+meeting.position
+                else window.location.href = "input-screen.html?"+meeting.position
             });
 
             // right click
             document.querySelector(meeting.btn_selector).addEventListener('contextmenu', function(e) {
-                window.location.href = "src/input.html?"+meeting.position
+                window.location.href = "input-screen.html?"+meeting.position
             });
 
         })
