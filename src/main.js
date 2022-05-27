@@ -18,8 +18,11 @@ const createWindow = () => {
   console.log(app.getPath('userData'))
   const mainWindow = new BrowserWindow({
     width: 800,
-    height: 600,
-    icon: path.join(__dirname, "images/zoommanagericon.png"),
+    height: 450,
+    frame: false,
+    resizable: false,
+    transparent: true,
+    icon: path.join(__dirname, "images/icon.png"),
 
     webPreferences: {
       nodeIntegration: true,
@@ -32,7 +35,7 @@ const createWindow = () => {
   mainWindow.loadFile(path.join(__dirname, 'select-screen.html'));
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+  // mainWindow.webContents.openDevTools();
 };
 
 app.on('ready', createWindow);
